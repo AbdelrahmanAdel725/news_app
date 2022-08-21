@@ -17,30 +17,11 @@ void main() async {
   DioHelper.init();
   await CacheHelper.init();
   bool? isDark = CacheHelper.getData(key: 'isDark');
-  // Widget widget;
-  // bool? onBoarding = CacheHelper.getData(key: 'onBoarding');
-  // token = CacheHelper.getData(key: 'token');
-  // print(onBoarding);
 
-
-  // if(onBoarding != null)
-  // {
-  //   if(token  != null)
-  //   {
-  //     widget = ShopLayout();
-  //   }else
-  //   {
-  //     widget = ShopLoginScreen();
-  //   }
-  // } else
-  // {
-  //   widget = OnBoardingScreen();
-  // }
 
   BlocOverrides.runZoned(() {
     runApp(MyApp(
       isDark: isDark,
-      // startWidget: widget,
     ));
   }, blocObserver: MyBlocObserver());
 }
@@ -50,7 +31,6 @@ class MyApp extends StatelessWidget {
   final Widget? startWidget;
   MyApp({this.isDark,this.startWidget});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -60,7 +40,6 @@ class MyApp extends StatelessWidget {
           ..changeAppMode(
             fromShared: isDark,
           ),),
-        // BlocProvider(create: (BuildContext context) => ShopCubit()..getHomeData()..getCategories())
       ],
 
       child: BlocConsumer<AppCubit, AppStates>(

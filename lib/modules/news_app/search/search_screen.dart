@@ -1,9 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, sized_box_for_whitespace
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/shared/styles/colors.dart';
 import '../../../layout/news_app/cubit/cubit.dart';
 import '../../../layout/news_app/cubit/states.dart';
 import '../../../shared/components/components.dart';
