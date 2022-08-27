@@ -75,7 +75,7 @@ class NewsCubit extends Cubit<NewsStates>{
           query: {
             'country':'eg',
             'category':'sports',
-            'apiKey':'a05a6cd9422e46bfa30e1d29af46c90c',
+            'apiKey':'',
           },).then((value)
         {
           sports = value.data['articles'];
